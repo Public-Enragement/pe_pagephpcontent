@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-10-01T17:23:22Z" product-name="pe_pagephpcontentelement">
+		<header/>
+		<body>
+			<trans-unit id="tx_pepagephpcontentelement_domain_model_phpcontent">
+				<source>P H P Content</source>
+			</trans-unit>
+			<trans-unit id="tx_pepagephpcontentelement_domain_model_phpcontent.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_pepagephpcontentelement_domain_model_phpcontent.php_content">
+				<source>Php Content</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,15 @@
+
+plugin.tx_pepagephpcontentelement {
+	view {
+		# cat=plugin.tx_pepagephpcontentelement/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:pe_pagephpcontentelement/Resources/Private/Templates/
+		# cat=plugin.tx_pepagephpcontentelement/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:pe_pagephpcontentelement/Resources/Private/Partials/
+		# cat=plugin.tx_pepagephpcontentelement/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:pe_pagephpcontentelement/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_pepagephpcontentelement//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
