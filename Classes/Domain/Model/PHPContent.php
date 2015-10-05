@@ -66,14 +66,15 @@ class PHPContent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Runs the php code in a shell, gathers the output and returns it.
+	 * Returns the phpContent via eval
 	 *
-	 * @return string $phpOutput
+	 * @return string $outputString
 	 */
-	public function phpContentOutput() {
-		$outputString = exec('php -r "' . $this->phpContent . '"');
-		$outputString = $this->phpContent;
-		#\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($outputString);
+	public function returnPhpContentParsed() {
+		ob_start();
+		eval("?" . chr(62) . $this->phpContent . chr(60) . "?");
+		$outputString = ob_get_contents();
+		ob_end_clean();
 		return $outputString;
 	}
 
@@ -83,14 +84,8 @@ class PHPContent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return string $phpContent
 	 */
 	public function getPhpContent() {
-		$outputString = shell_exec('php -r "' . addslashes($this->phpContent) . '"');
-		
-		#foreach ($output as $tmp) {
-		#		$outputString .= $tmp;
-		#}
-		
-		#\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($tmp);
-		return $outputString;
+		#return $this->returnPhpContentShell();
+		return $this->returnPhpContentParsed();
 	}
 
 	/**
