@@ -15,11 +15,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 <f:flashMessages renderMode="div" />
 	<f:for each="{pHPContents}" as="pHPContent">
-		<div class="container">
+		<div class="phpWrapper">
 			<h1>{pHPContent.title}</h1>
-			<div class="alert alert-success" role="alert">
-				<f:format.raw>{pHPContent.phpContent}</f:format.raw>
-			</div>
+			<div class="phpContent"><f:format.raw>{pHPContent.phpContent}</f:format.raw></div>	
 		</div>
 	</f:for>
 </f:section>
