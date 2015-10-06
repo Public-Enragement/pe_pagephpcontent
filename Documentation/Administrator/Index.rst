@@ -24,17 +24,15 @@ Language should be non / semi-technical, explaining, using small examples.
 
 Installation
 ------------
-
-- How should the extension be installed?
-- Are they dependencies to resolve?
-- Is it a static template file to be included?
-
 To install the extension, perform the following steps:
 
-#. Go to the Extension Manager
-#. Install the extension
-#. Load the static template
-#. ...
+. Go to the Extension Manager
+. Install the extension
+. Load the static template
+. Include the plugin on any page you want
+. Go to list and chose the site or a directory for the scripts
+. Make a new script record, copy your php code into it
+. in the plugin in tab "References" select the page or directory you added the php script
 
 For a list of configuration options, using a definition list is recommended:
 

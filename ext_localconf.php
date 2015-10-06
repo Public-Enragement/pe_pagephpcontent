@@ -7,7 +7,7 @@ if (!defined('TYPO3_MODE')) {
 	'PublicEnragement.' . $_EXTKEY,
 	'Phpcontent',
 	array(
-		'PHPContent' => 'list, show, ',
+		'PHPContent' => 'list',
 		
 	),
 	// non-cacheable actions
